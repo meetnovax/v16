@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NovaX™ — Be the Hero of Your Future™</title>
+<meta name="description" content="NovaX™ helps people discover what they bring, connect with the right people and opportunities, and turn their ambition into meaningful progress.">
+<link rel="stylesheet" href="legal.css">
+<style>
+.about-nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:10px 2px 22px}.about-nav img{width:138px;height:auto}.about-nav .brand-lockup{display:flex;align-items:center;gap:12px;min-width:0}.about-nav .brand-tagline{color:#9eb0ca;letter-spacing:.18em;font-size:8px;white-space:nowrap;text-transform:uppercase}.about-links{display:flex;gap:18px;flex-wrap:wrap;justify-content:flex-end}.about-links a{color:#91a1b7;text-decoration:none;font-size:10px;letter-spacing:.08em;text-transform:uppercase}.about-links a:hover{color:#c4dcff}.about-hero{padding:26px 0 10px}.about-hero h1{max-width:760px}.about-hero .lead{font-size:17px;max-width:720px;color:#b8c5d8}.journey{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:24px 0}.journey-card{border:1px solid var(--line);background:rgba(73,167,255,.045);border-radius:14px;padding:16px}.journey-card strong{display:block;color:#eef5ff;font-size:12px}.journey-card span{display:block;color:#7f91aa;font-size:10px;line-height:1.5;margin-top:6px}@media(max-width:700px){.about-nav{align-items:flex-start}.about-links{gap:10px}.journey{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.journey{grid-template-columns:1fr}.about-nav img{width:118px}.about-nav .brand-tagline{font-size:6px;letter-spacing:.11em}.about-links a:nth-child(1),.about-links a:nth-child(2){display:none}}
+.film{margin:4px 0 34px}.film-frame{position:relative;aspect-ratio:16/9;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#020712 center/cover no-repeat;box-shadow:0 18px 60px rgba(0,0,0,.45)}.film-frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#020712}.film-play{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;border:0;width:100%;cursor:pointer;color:#fff;font:inherit;background:linear-gradient(180deg,rgba(2,7,18,.15),rgba(2,7,18,.62))}.film-play .btn{width:74px;height:74px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.7);backdrop-filter:blur(6px);transition:transform .2s,background .2s}.film-play:hover .btn,.film-play:focus-visible .btn{transform:scale(1.07);background:rgba(255,255,255,.24)}.film-play svg{margin-left:4px}.film-play .cap{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#dbe9ff}.film-play .cap small{display:block;margin-top:5px;letter-spacing:.08em;color:#9eb0ca;text-transform:none;font-size:10px}.film-end{position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:20px;background:rgba(2,7,18,.78)}.film-end.on{display:flex}.film-end p{margin:0;color:#dbe9ff;font-size:15px}.film-end .row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}.film-end a,.film-end button{font:inherit;font-size:11px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:999px;padding:11px 20px;cursor:pointer}.film-end a{background:linear-gradient(90deg,#1fb6ff,#8a3cff);color:#fff;border:0}.film-end button{background:transparent;color:#c4dcff;border:1px solid rgba(196,220,255,.45)}.film-note{color:#7f91aa;font-size:10px;margin:8px 2px 0}@media(max-width:480px){.film-play .btn{width:60px;height:60px}.film-end p{font-size:13px}}
+.story .verbs{font-size:15px;letter-spacing:.04em;color:#7fd0ff;font-weight:600;margin:6px 0 18px}.story .sub{color:#9eb0ca;font-size:15px;margin:-4px 0 12px}.about-hero{padding:18px 0 6px}.about-hero h1{max-width:none;margin:0 0 16px}
+.story-cta{margin-top:30px;padding-top:26px;border-top:1px solid var(--line);text-align:center}.story-cta h2{margin:0 0 6px}.story-cta .sub{margin:0 0 20px}.cta-btn{display:inline-block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:#fff;background:linear-gradient(90deg,#1fb6ff,#8a3cff);border-radius:999px;padding:14px 28px;font-weight:700}.story-cta a.cta-btn,.story-cta a.cta-btn:visited{color:#fff}.cta-btn:hover{filter:brightness(1.1)}
+.mb{display:none}
+@media(max-width:480px){.about-nav{padding-bottom:18px}.about-nav .brand-lockup{gap:10px}.about-nav img{width:100px}.about-nav .brand-tagline{font:700 8.5px/1.35 Inter,sans-serif;letter-spacing:.1em;color:#d5e2f3}.mb{display:inline}.about-links{display:none}}
+@media(max-width:480px){.story-cta h2{font-size:clamp(16px,5.1vw,24px);white-space:nowrap}}
+</style>
+</head>
+<body>
+<main class="page">
+  <nav class="about-nav" aria-label="Site navigation">
+    <div class="brand-lockup"><a href="index.html"><img src="assets/NovaX_APPROVED_LOGO_ASSET.png" alt="NovaX™"></a><span class="brand-tagline">Building the<br class="mb"> Parallel Economy™</span></div>
+    <div class="about-links"><a href="index.html">Home</a><a href="quiz.html">Quiz</a><a href="base.html">Base</a><a href="about.html">About</a><a href="faq.html">FAQ</a></div>
+    </nav>
+  <section class="about-hero">
+    <h1>Be the Hero of Your Future™</h1>
+  </section>
+  <section class="film" aria-label="NovaX™ brand film">
+    <div class="film-frame" id="filmFrame" style="background-image:url('assets/video/novax-brand-film-poster.jpg')">
+      <video id="filmVideo" preload="none" playsinline poster="assets/video/novax-brand-film-poster.jpg" aria-label="NovaX™ brand film: Building the Parallel Economy™">
+        <source src="assets/video/novax-brand-film-720.mp4" type="video/mp4">
+        <source src="assets/video/novax-brand-film-720.webm" type="video/webm">
+      </video>
+      <button class="film-play" id="filmPlay" type="button" aria-label="Play the NovaX™ brand film with sound">
+        <span class="btn"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span>
+        <span class="cap">Watch the film<small>About 70 seconds &middot; plays with sound</small></span>
+      </button>
+      <div class="film-end" id="filmEnd">
+        <p>Your Journey Starts with You</p>
+        <div class="row"><a href="quiz.html">Take the Builder Quiz™</a><button type="button" id="filmReplay">Watch again</button></div>
+      </div>
+    </div>
+  </section>
+  <article class="panel story">
+    <h2>What Is NovaX™?</h2>
+    <p>NovaX™ helps you recognize your strengths, connect with the right people, discover opportunities, and turn your ambition into meaningful progress.</p>
+    <p class="verbs">Discover. Connect. Build. Progress. Prosper.</p>
+
+    <h2>Building the Parallel Economy™</h2>
+    <p class="sub">A different way to move forward.</p>
+    <p>You don't have to build your future alone. The Parallel Economy™ is about people using their strengths, relationships, and ideas to create opportunities and make progress together. NovaX™ is being built to help you find your place in that bigger picture.</p>
+
+    <h2>Why I'm Building NovaX™</h2>
+    <p>I believe there's more you can do and become than you may realize right now. Sometimes, one connection or one opportunity can help you see a way forward that you couldn't see before.</p>
+    <p>I'm building NovaX™ to help make those possibilities easier to find, not to tell you what your journey should look like, but to help you discover your strengths, meet people who bring something different, and take your next step.</p>
+
+    <h2>Your Story. Your Next Step.</h2>
+    <p>Maybe you're building a business, exploring an idea, or simply ready for something more. You don't need to have it all figured out. Start with what matters to you, what you bring, and where you want to go.</p>
+    <p>Your journey is yours to shape. NovaX™ is being built to help you find connections and possibilities that can move it forward.</p>
+    <p class="verbs">Discover Your Strengths. Connect What's Possible. Build Your Future.</p>
+
+    <div class="story-cta">
+      <h2>Your Journey Starts with You</h2>
+      <p class="sub">Discover Your Builder Identity.</p>
+      <a class="cta-btn" href="quiz.html">Take the Builder Quiz™</a>
+    </div>
+  </article>
+  <nav class="footer" aria-label="Site navigation">
+    <span class="copyright">Copyright © 2026 NovaX™</span>
+    <a href="index.html">Home</a><a href="quiz.html">Quiz</a><a href="base.html">Base</a><a href="faq.html">FAQ</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a>
+  </nav>
+</main>
+<script>
+(function(){
+var v=document.getElementById('filmVideo'),b=document.getElementById('filmPlay'),e=document.getElementById('filmEnd'),r=document.getElementById('filmReplay'),f=document.getElementById('filmFrame');
+if(!v||!b)return;
+var hd=false;
+function pick(){try{var c=navigator.connection||{};if(!hd&&window.innerWidth>=1100&&!c.saveData&&!/2g|3g/.test(c.effectiveType||'')){v.querySelector('source').src='assets/video/novax-brand-film-1080.mp4';v.load();}hd=true;}catch(x){}}
+function start(){pick();e.classList.remove('on');b.style.display='none';f.style.backgroundImage='none';v.setAttribute('controls','');var p=v.play();if(p&&p.catch)p.catch(function(){b.style.display='flex';v.removeAttribute('controls');});}
+b.addEventListener('click',start);
+v.addEventListener('ended',function(){v.removeAttribute('controls');e.classList.add('on');});
+r.addEventListener('click',function(){v.currentTime=0;start();});
+})();
+</script>
+<script src="assets/novax-avatar.js" defer></script>
+</body>
+</html>

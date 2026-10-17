@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>NovaX™ — Building the Parallel Economy™</title>
+<meta name="description" content="NovaX™ — Building the Parallel Economy™. What would you do with $50K? Take the quiz to see if you qualify for NovaX™.">
+<meta name="theme-color" content="#030a16">
+<link rel="preload" as="image" href="assets/loop/novax-home-loop-landscape-poster.jpg" media="(min-width:768px) and (orientation:landscape)">
+<link rel="preload" as="image" href="assets/loop/novax-home-loop-portrait-poster-v2.jpg" media="(max-width:767px),(orientation:portrait)">
+<style>
+@font-face{font-family:Inter;font-weight:500;font-style:normal;font-display:swap;src:url(assets/fonts/Inter-Medium.woff) format("woff")}@font-face{font-family:Inter;font-weight:500;font-style:italic;font-display:swap;src:url(assets/fonts/Inter-MediumItalic.woff) format("woff")}@font-face{font-family:Inter;font-weight:700;font-style:normal;font-display:swap;src:url(assets/fonts/Inter-Bold.woff) format("woff")}@font-face{font-family:Inter;font-weight:800;font-style:normal;font-display:swap;src:url(assets/fonts/Inter-ExtraBold.woff) format("woff")}
+*,*::before,*::after{box-sizing:border-box}
+:root{--page-bg:#030a16;--footer:#03070d;--footer-text:#8b96a8;--footer-link:#b9c6d8}
+html,body{margin:0;height:100%;background:var(--page-bg);color:#fff;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;-webkit-text-size-adjust:100%}
+.landing-page{display:flex;flex-direction:column;min-height:100vh;min-height:100svh}
+.stage{position:relative;flex:1;min-height:0;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:max(16px,env(safe-area-inset-top)) 18px clamp(16px,4.2vh,44px)}
+.bg,.still,.bg video,.bg canvas,.scrim{position:absolute;inset:0;width:100%;height:100%}
+.still{background:center/cover no-repeat url(assets/loop/novax-home-loop-landscape-poster.jpg);transform-origin:50% 60%}
+.bg video{object-fit:cover;opacity:0;transition:opacity .7s ease}.on .bg video{opacity:1}
+.bg canvas{pointer-events:none;opacity:0;transition:opacity 1s}.fb .bg canvas{opacity:1}
+.fb .still{animation:push 26s ease-in-out infinite alternate}
+@keyframes push{from{transform:scale(1)}to{transform:scale(1.09) translate3d(-1%,-.6%,0)}}
+.scrim{pointer-events:none;background:linear-gradient(to bottom,rgba(3,9,20,.52),rgba(3,9,20,0) 20%,rgba(3,9,20,0) 42%,rgba(3,9,20,.6) 74%,rgba(3,9,20,.76))}
+.brand,.copy{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center}
+.logo{width:clamp(150px,13vw,250px);height:auto}
+.tag{margin:10px 0 0;font:700 clamp(12px,1vw,19px)/1.3 Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.8),0 2px 14px rgba(0,0,0,.85)}
+.mb{display:none}
+.hl{margin:0;font:800 clamp(30px,min(3.55vw,7.4vh),68px)/1.12 Inter,sans-serif;white-space:nowrap;text-shadow:0 2px 18px rgba(0,0,0,.55)}
+.hl b{font-weight:800;text-shadow:none;background:linear-gradient(90deg,#28beff,#aa5aff);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;filter:drop-shadow(0 2px 10px rgba(0,0,0,.5))}
+.sub{margin:clamp(8px,1.6vh,18px) 0 0;font:700 clamp(16px,1.6vw,31px)/1.35 Inter,sans-serif;text-wrap:balance;text-shadow:0 1px 3px rgba(0,0,0,.8),0 2px 14px rgba(0,0,0,.9)}
+.go{margin-top:clamp(14px,2.6vh,30px);display:inline-flex;align-items:center;gap:.7em;min-height:clamp(48px,6.4vh,70px);padding:0 clamp(28px,2.8vw,52px);border:3px solid transparent;border-radius:999px;font:700 clamp(12px,1.1vw,22px) Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#fff;text-decoration:none;background:linear-gradient(rgba(17,27,55,.78),rgba(17,27,55,.78)) padding-box,linear-gradient(90deg,#20cdff,#9650ff) border-box;transition:filter .2s,transform .2s}
+.go:hover{filter:brightness(1.25);transform:translateY(-1px)}.go:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.ring{width:48px;height:auto;margin-top:clamp(12px,2.4vh,26px);animation:rise .8s 1.3s ease both,spin 18s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.circle{margin:clamp(6px,1.2vh,12px) 0 0;font:700 clamp(11px,1.04vw,20px) Inter,sans-serif;letter-spacing:.3em;text-transform:uppercase;text-shadow:0 1px 3px rgba(0,0,0,.8),0 2px 14px rgba(0,0,0,.9)}
+.brand,.hl,.sub,.go,.circle{opacity:0;animation:rise .8s ease forwards}
+.hl{animation-delay:.25s}.sub{animation-delay:.6s}.go{animation-delay:.95s}.circle{animation-delay:1.45s}.ring{opacity:0}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.pp{position:absolute;z-index:3;right:max(12px,env(safe-area-inset-right));bottom:12px;width:40px;height:40px;display:grid;place-items:center;padding:0;border:1px solid rgba(255,255,255,.4);border-radius:50%;background:rgba(3,9,20,.5);color:#fff;cursor:pointer}
+.pp[hidden]{display:none}.pp:focus-visible{outline:2px solid #fff;outline-offset:3px}.pp svg{width:14px;height:14px;fill:currentColor}.pp .i2{display:none}.paused .pp .i1{display:none}.paused .pp .i2{display:block}
+@media (max-width:767px),(orientation:portrait){.still{background-image:url(assets/loop/novax-home-loop-portrait-poster-v2.jpg);background-position:50% 0}.bg video{object-position:50% 0}}
+@media (max-width:767px){.logo{width:120px}.tag{font-size:12px;letter-spacing:.14em}.mb{display:inline}.hl{font-size:clamp(28px,8.6vw,44px);white-space:normal}.l1,.l2{display:block}.sub{font-size:15px;max-width:20em}.go{font-size:13px;min-height:48px;padding:0 30px}.ring{width:44px}.circle{font-size:11px;letter-spacing:.26em}.stage{padding-bottom:calc(18px + env(safe-area-inset-bottom))}}
+@media (max-height:520px){.tag,.ring,.circle{display:none}.hl{font-size:clamp(22px,6vh,34px)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.brand,.hl,.sub,.go,.circle,.ring{opacity:1}}
+.site-footer{width:100%;display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 12px 16px;background:var(--footer);color:var(--footer-text);font-size:10px;line-height:1.4;letter-spacing:.08em;text-transform:uppercase;text-align:center}.site-footer a{color:var(--footer-link);text-decoration:none}.site-footer a:hover{color:#fff}.site-footer a:focus-visible{outline:2px solid #fff;outline-offset:3px}
+</style>
+</head>
+<body>
+<main class="landing-page" aria-label="NovaX™ landing page">
+  <section class="stage" aria-label="NovaX™ introduction">
+    <div class="bg" aria-hidden="true"><div class="still"></div><video id="loop" muted playsinline loop preload="none" tabindex="-1"></video><canvas id="fx"></canvas></div>
+    <div class="scrim"></div>
+    <header class="brand"><img class="logo" src="assets/NovaX_APPROVED_LOGO_ASSET.png" alt="NovaX™"><p class="tag" aria-label="Building the Parallel Economy">Building the<br class="mb"> Parallel Economy™</p></header>
+    <div class="copy">
+      <h1 class="hl"><span class="l1">What would you do</span> <span class="l2">with <b>$50K?</b></span></h1>
+      <p class="sub">Take the quiz to see if you qualify for NovaX™</p>
+      <a class="go" href="quiz.html">Let’s begin <span aria-hidden="true">→</span></a>
+      <img class="ring" src="assets/NovaX_RING_VIVID.png" alt="" width="85" height="86">
+      <p class="circle">The first circle is forming.</p>
+    </div>
+    <button class="pp" id="pp" type="button" aria-label="Play background video" hidden><svg class="i1" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 1h3.5v12H2zM8.5 1H12v12H8.5z"/></svg><svg class="i2" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1l10 6-10 6z"/></svg></button>
+  </section>
+  <nav class="site-footer" aria-label="Site navigation">
+    <span>Copyright © 2026 NovaX™</span><span aria-hidden="true">•</span>
+    <a href="index.html">Home</a><span aria-hidden="true">•</span>
+    <a href="quiz.html">Quiz</a><span aria-hidden="true">•</span>
+    <a href="about.html">About</a><span aria-hidden="true">•</span>
+    <a href="privacy.html">Privacy</a><span aria-hidden="true">•</span>
+    <a href="terms.html">Terms</a>
+  </nav>
+</main>
+<script>
+(function(){
+var st=document.querySelector('.stage'),v=document.getElementById('loop'),pp=document.getElementById('pp'),cv=document.getElementById('fx');
+var mq=function(q){return window.matchMedia&&matchMedia(q).matches},Q='(max-width:767px),(orientation:portrait)';
+var reduced=mq('(prefers-reduced-motion: reduce)'),cn=navigator.connection||{},slow=cn.saveData||/(^|-)2g$/.test(cn.effectiveType||'');
+var SRC={l:'assets/loop/novax-home-loop-landscape.mp4',p:'assets/loop/novax-home-loop-portrait-v2.mp4'},LITE='assets/loop/novax-home-loop-portrait-lite-v2.mp4';
+var cur='',kind='',tried={},userPaused=false,raf=0,ps=[],dbg=null;
+if(/[?&]debug=1/.test(location.search)){dbg=document.createElement('div');dbg.style.cssText='position:fixed;left:6px;bottom:56px;z-index:9;max-width:92vw;font:11px/1.3 monospace;color:#8f8;background:rgba(0,0,0,.75);padding:4px 6px;white-space:pre-wrap';document.body.appendChild(dbg);}
+function log(m){if(dbg)dbg.textContent+=m+'\n';}
+log('reduced='+reduced+' saveData/slow='+!!slow+' ua='+navigator.userAgent.slice(-70));
+function stopFx(){cancelAnimationFrame(raf);raf=0;}
+function startFx(){
+  if(raf||!cv||!cv.getContext)return;var g=cv.getContext('2d'),dpr=Math.min(window.devicePixelRatio||1,1.5),W,H;
+  function size(){W=cv.width=Math.round(cv.clientWidth*dpr);H=cv.height=Math.round(cv.clientHeight*dpr);}size();window.addEventListener('resize',size);
+  if(!ps.length)for(var i=0;i<36;i++)ps.push({x:Math.random(),y:Math.random(),r:.6+Math.random()*2.2,vy:.012+Math.random()*.03,vx:(Math.random()-.5)*.01,a:.25+Math.random()*.5,t:Math.random()*6,w:Math.random()<.2?[170,205,255]:[255,222,165]});
+  var last=performance.now();
+  (function f(n){raf=requestAnimationFrame(f);if(document.hidden)return;var dt=Math.min((n-last)/1000,.1);last=n;g.clearRect(0,0,W,H);g.globalCompositeOperation='lighter';
+    for(var i=0;i<ps.length;i++){var p=ps[i];p.y-=p.vy*dt;p.x+=p.vx*dt;p.t+=dt;if(p.y<-.05){p.y=1.05;p.x=Math.random();}
+      var a=p.a*(.6+.4*Math.sin(p.t*1.3)),R=p.r*5*dpr,x=p.x*W,y=p.y*H,gr=g.createRadialGradient(x,y,0,x,y,R);
+      gr.addColorStop(0,'rgba('+p.w+','+a+')');gr.addColorStop(1,'rgba('+p.w+',0)');g.fillStyle=gr;g.beginPath();g.arc(x,y,R,0,6.283);g.fill();}
+  })(last);
+}
+function setPaused(on){st.classList[on?'add':'remove']('paused');pp.setAttribute('aria-label',on?'Play background video':'Pause background video');}
+function fallback(why){log('fallback: '+why);st.classList.remove('on');setPaused(true);if(reduced)return;st.classList.add('fb');startFx();}
+function load(src){cur=src;tried[src]=1;v.src=src;v.load();}
+function tryPlay(onFail){v.muted=true;v.preload='auto';var p;try{p=v.play();}catch(e){onFail(e);return;}if(p&&p.catch)p.catch(onFail);}
+function watch(ms,why){setTimeout(function(){if(userPaused||st.classList.contains('on'))return;if(kind==='p'&&!tried[LITE])lite(why);else fallback(why);},ms);}
+function lite(why){log('trying lite ('+why+')');load(LITE);tryPlay(function(e){fallback('lite rejected '+(e&&e.name));});watch(6000,'lite timeout');}
+function start(){kind=mq(Q)?'p':'l';tried={};load(SRC[kind]);
+  tryPlay(function(e){log('play rejected: '+(e&&e.name));if(e&&e.name==='NotAllowedError')fallback('autoplay blocked');else if(kind==='p'&&!tried[LITE])lite('play error');else fallback('play error');});
+  watch(4500,'timeout');}
+v.addEventListener('playing',function(){log('playing '+cur.split('/').pop());st.classList.add('on');st.classList.remove('fb');stopFx();setPaused(false);});
+v.addEventListener('error',function(){log('video error code '+(v.error&&v.error.code));if(kind==='p'&&!tried[LITE])lite('error');else fallback('error');});
+pp.addEventListener('click',function(){
+  if(v.paused){userPaused=false;if(!cur||v.error)start();else tryPlay(function(e){log('manual play failed '+(e&&e.name));});}
+  else{userPaused=true;v.pause();setPaused(true);}
+});
+pp.hidden=false;setPaused(true);
+if(reduced||slow){fallback(reduced?'reduced-motion (tap play to start)':'save-data');}
+else{if(document.readyState==='complete')start();else window.addEventListener('load',start);
+  document.addEventListener('pointerdown',function(e){if(pp.contains(e.target))return;if(!st.classList.contains('on')&&!userPaused&&cur&&v.paused)tryPlay(function(){});},{once:true});}
+var m=window.matchMedia&&matchMedia(Q);if(m&&m.addEventListener)m.addEventListener('change',function(){if(cur&&(mq(Q)?'p':'l')!==kind&&!userPaused&&!reduced&&!slow)start();});
+})();
+</script>
+</body>
+</html>

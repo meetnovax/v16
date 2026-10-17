@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NovaX™ Base — Be the Hero of Your Future™</title>
+<meta name="description" content="Your NovaX™ Base: invite Builders, unlock your Builder Guide and explore the three Paths.">
+<style>
+@font-face{font-family:Inter;font-weight:500;font-style:normal;font-display:swap;src:url(assets/fonts/Inter-Medium.woff) format("woff")}
+@font-face{font-family:Inter;font-weight:700;font-style:normal;font-display:swap;src:url(assets/fonts/Inter-Bold.woff) format("woff")}
+@font-face{font-family:Inter;font-weight:800;font-style:normal;font-display:swap;src:url(assets/fonts/Inter-ExtraBold.woff) format("woff")}
+:root{--bg:#050d1b;--line:#214a73;--text:#eaf2fb;--mute:#9db4cf;--cyan:#20d8ff;--grad:linear-gradient(100deg,#20d8ff,#3d8cff 55%,#a55cff)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;background:#020712}
+body{margin:0;background:radial-gradient(circle at 50% 0,#0c1b32,#050d1b 45%,#020712);background-attachment:fixed;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh}
+a{color:inherit}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px clamp(16px,4vw,54px);border-bottom:1px solid rgba(71,111,153,.4);position:sticky;top:0;z-index:20;background:rgba(5,13,27,.92);backdrop-filter:blur(14px)}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}.brand img{width:112px;height:auto;display:block}
+.tl{font:500 10px/1.35 Inter,sans-serif;letter-spacing:.14em;color:#b9c9dd;text-transform:uppercase}.mb{display:none}
+.acct{display:flex;align-items:center;gap:10px;text-decoration:none}.nm{font:800 13px Inter,sans-serif;color:var(--text)}
+.av{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#3d8cff,#9b5cff);display:grid;place-items:center;font:800 13px Inter,sans-serif;color:#fff}
+.wrap{max-width:1040px;margin:0 auto;padding:28px clamp(16px,3vw,24px) 40px}
+.eyebrow{font:800 11px Inter,sans-serif;letter-spacing:.2em;color:var(--cyan);text-transform:uppercase}
+h1{font-size:clamp(30px,6.4vw,44px);line-height:1.08;margin:10px 0 8px;font-weight:800;letter-spacing:-.01em}
+.sub{color:var(--mute);font-size:16px;margin:0 0 22px}
+.card{background:linear-gradient(145deg,rgba(10,27,51,.96),rgba(4,13,27,.96));border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:16px}
+h2{font-size:21px;margin:0 0 6px;font-weight:800}h3{margin:0 0 6px;font-size:18px;font-weight:800}
+.lead{color:#c3d3e6;font-size:15px;line-height:1.55;margin:0 0 14px}
+.btn{display:block;width:100%;text-align:center;padding:15px;border-radius:10px;border:0;background:var(--grad);color:#04101f;font:800 13px Inter,sans-serif;letter-spacing:.08em;cursor:pointer;text-decoration:none;min-height:52px;transition:filter .2s,transform .2s}
+.btn:hover,.btn:focus-visible{filter:brightness(1.1);transform:translateY(-1px)}.btn.ghost{background:transparent;border:1px solid var(--cyan);color:#dff6ff}
+.btn:disabled{opacity:.55;cursor:not-allowed;transform:none;filter:none}
+/* progress */
+.top2{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.big{display:flex;align-items:center;gap:14px;font-size:56px;font-weight:800;line-height:1;margin:8px 0 0}
+.big small{font-size:clamp(16px,2.2vw,22px);font-weight:700;color:var(--mute);line-height:1.3}
+.share{width:300px;flex:0 0 auto;margin-top:6px}
+.lad{margin-top:26px}.track{position:relative;height:10px;border-radius:99px;background:#0d2540;border:1px solid #1c446a}
+.track i{position:absolute;left:0;top:-1px;bottom:-1px;border-radius:99px;background:var(--grad);transition:width .5s ease}
+.track .m{position:absolute;top:50%;transform:translate(-50%,-50%);width:26px;height:26px;border-radius:50%;border:2px solid #3d8cff;background:#061529;display:grid;place-items:center;font:800 11px Inter,sans-serif}
+.track .m.done{background:var(--grad);color:#04101f;border-color:transparent}
+.labs{position:relative;height:62px;margin-top:20px}
+.labs div{position:absolute;top:0;transform:translateX(-50%);text-align:center;font-size:12px;color:var(--mute);line-height:1.35;width:96px}
+.labs div b{display:block;color:var(--text);font-size:13px;margin-bottom:2px}
+.next-note{margin:6px 0 0;color:#8fe3ff;font-size:14px;font-weight:700;text-align:center}
+/* paths */
+.sect{margin:6px 0 12px}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
+.pc{border:1px solid var(--line);border-radius:14px;padding:16px;background:rgba(6,16,31,.7);display:flex;flex-direction:column}
+.pc.open{border-color:#3d8cff;box-shadow:0 0 0 1px rgba(61,140,255,.35),0 10px 30px rgba(61,140,255,.12)}
+.ptop{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;gap:8px}
+.lvl{font:800 10px Inter,sans-serif;letter-spacing:.14em;color:#8fe3ff}
+.lk{font:700 11px Inter,sans-serif;color:#c4d6ea;border:1px solid #2c5a8a;border-radius:99px;padding:3px 9px;white-space:nowrap}
+.pc.open .lk{background:var(--grad);color:#04101f;border-color:transparent}
+.pt{margin:0 0 10px;color:#c3d3e6;font-size:14px;line-height:1.5}
+.pc ul,.inside{margin:0 0 12px;padding-left:18px;color:#9db4cf;font-size:13px;line-height:1.7}.inside{color:#c3d3e6}
+.pc .btn{margin-top:auto;padding:12px;min-height:44px;font-size:12px}
+/* two column */
+.grid2{display:grid;grid-template-columns:1.1fr .9fr;grid-template-areas:"guide note" "book note";gap:0 16px;align-items:start}
+.g-guide{grid-area:guide}.g-note{grid-area:note;height:calc(100% - 16px)}.g-book{grid-area:book}
+.row{display:flex;gap:16px;align-items:flex-start}
+.cover{width:84px;height:112px;border-radius:8px;background:linear-gradient(160deg,#143a73,#6a3fd0);border:1px solid #5aa3ff;display:grid;place-items:center;text-align:center;font:800 10px/1.3 Inter,sans-serif;letter-spacing:.08em;padding:8px;flex:0 0 auto;box-shadow:0 8px 24px rgba(61,140,255,.3);text-transform:uppercase}
+.price{display:flex;align-items:baseline;gap:10px;margin:12px 0}.price b{font-size:34px}.price s{color:var(--mute)}.price span{font-size:13px;color:#8fe3ff;font-weight:700}
+.or{display:flex;align-items:center;gap:10px;color:var(--mute);font:700 11px Inter,sans-serif;letter-spacing:.16em;margin:12px 0}.or:before,.or:after{content:"";flex:1;height:1px;background:var(--line)}
+.free-note{color:#8fe3ff;font-size:13px;font-weight:700;margin:0 0 12px}
+.note p{font-size:16px;line-height:1.65;color:#dbe7f5;margin:0 0 12px}
+.sig{display:flex;align-items:center;gap:12px;margin-top:14px}.face{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#20d8ff,#a55cff);flex:0 0 auto}.sig b{display:block;font-size:15px}.sig span{color:var(--mute);font-size:13px}
+.tag{display:inline-block;font:800 10px Inter,sans-serif;letter-spacing:.12em;color:#ffd78a;border:1px dashed #a98440;border-radius:6px;padding:3px 7px;margin-bottom:10px}
+.lnk{color:#8fe3ff;font-weight:700;font-size:14px;text-decoration:none;background:none;border:0;padding:0;cursor:pointer;font-family:inherit}.lnk:hover{text-decoration:underline}
+.details{margin:18px 0 0;border:1px dashed #2c5a8a;border-radius:12px;padding:10px 14px;color:var(--mute);font-size:13px}.details summary{cursor:pointer;font-weight:700}
+.test-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.test-grid button{border:1px solid var(--cyan);background:transparent;color:#dff6ff;border-radius:8px;padding:9px 14px;font:700 12px Inter,sans-serif;cursor:pointer}
+.footer{text-align:center;color:var(--mute);font-size:13px;margin-top:28px;line-height:2}.footer a{text-decoration:none}.footer a:hover{text-decoration:underline}
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);background:#0d2540;border:1px solid #3d8cff;color:#eaf2fb;padding:12px 18px;border-radius:10px;font-size:14px;opacity:0;pointer-events:none;transition:.25s;z-index:50;max-width:90vw;text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:780px){
+ .grid2{display:block}.g-note{height:auto}.pgrid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+ .mb{display:inline}.tl{font-size:8.5px;letter-spacing:.1em}.brand{gap:10px}.brand img{width:100px}.nm{display:none}
+ .top2{display:block}.share{width:100%;margin-top:16px}.big{font-size:48px}.big small{font-size:16px}
+ .labs div{width:76px;font-size:10.5px}.labs div b{font-size:11px}
+ .card{padding:18px}
+}
+@media(prefers-reduced-motion:reduce){.track i,.btn,.toast{transition:none}}
+</style>
+</head>
+<body>
+<header class="nav"><a class="brand" href="index.html"><img src="assets/NovaX_APPROVED_LOGO_ASSET.png" alt="NovaX™"><span class="tl">Building the<br class="mb"> Parallel Economy™</span></a><a class="acct" href="results.html" aria-label="Your Builder Results"><span class="nm" id="userName">Builder</span><span class="av" id="avatar">B</span></a></header>
+<main class="wrap">
+ <div class="eyebrow">NovaX™ Base</div>
+ <h1>Be the Hero of Your Future™</h1>
+ <p class="sub">Know your path. Make your next move.</p>
+
+ <section class="card" aria-labelledby="progHead">
+  <div class="top2"><div><div class="eyebrow" id="progHead">Your invite progress</div><div class="big"><span id="inviteCount">0</span><small>Have taken the Builder&nbsp;Quiz™ through your link</small></div></div><button class="btn share" id="inviteBtn" type="button">SHARE MY INVITE LINK</button></div>
+  <div class="lad"><div class="track" id="track"><i id="fill" style="width:0"></i></div><div class="labs" id="labs"></div></div>
+  <p class="next-note" id="nextNote"></p>
+ </section>
+
+ <div class="eyebrow sect">The 3 Paths · each has its own page</div>
+ <section class="pgrid" id="paths"></section>
+
+ <div class="grid2">
+  <section class="card g-guide" id="guideCard"></section>
+  <section class="card note g-note"><div class="eyebrow" style="margin-bottom:10px">A note from the Founder</div><span class="tag">SAMPLE COPY · REPLACE WITH YOUR WORDS</span><p>I'm building NovaX™ for people who are done waiting for permission. Whatever you are building, you don't have to do it alone.</p><p>I'm writing my story chapter by chapter, and you can read along.</p><div class="sig"><div class="face" aria-hidden="true"></div><div><b id="founderName">[Your name]</b><span>Founder, NovaX™</span></div></div><div style="margin-top:14px"><button class="lnk" id="founderSite" type="button">Visit my website →</button></div></section>
+  <section class="card g-book"><div class="eyebrow" style="margin-bottom:8px">The book</div><h2>Get the book early for $5</h2><p class="lead">My founder story in the making. Pre-order now and read it as it's written.</p><button class="btn ghost" id="bookBtn" type="button">PRE-ORDER · $5</button></section>
+ </div>
+
+ <details class="details"><summary>Prototype testing controls (remove before launch)</summary><div class="test-grid"><button data-sim="1" type="button">+1</button><button data-sim="5" type="button">+5</button><button data-sim="10" type="button">+10</button><button data-sim="20" type="button">+20</button><button id="simReset" type="button">RESET</button><button id="copyBtn" type="button">COPY INVITE LINK</button></div></details>
+ <footer class="footer"><a href="index.html">Home</a> · <a href="results.html">Builder Results</a> · <a href="quiz.html">Builder Quiz™</a> · <a href="about.html">About</a> · <a href="faq.html">FAQ</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · NovaX™</footer>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+/* ===== Base config: connect these when ready ===== */
+const BASE_CONFIG={
+  founderName:'[Your name]',
+  founderSiteUrl:'',          // your personal founder website
+  guideCheckoutUrl:'',        // $20 Builder price checkout (regular $25)
+  guideDownloadUrl:'',        // free download after 5 confirmed invites
+  bookPresellUrl:'',          // $5 book pre-order
+  pathPages:{steward:'',sentinel:'',vanguard:''} // dedicated Path pages, when built
+};
+const GUIDE_PRICE=20,GUIDE_REGULAR=25;
+const KEY='novax_builder_v4',SIM_KEY='novax_base_sim';
+const MILESTONES=[5,10,15,20];
+const PATHS=[
+ {id:'steward',name:'Steward Path™',level:'Beginner',need:10,line:'Start by serving. Learn how Builders earn trust and create value for others.',items:['How to give value first','Your first 3 moves','A starter checklist']},
+ {id:'sentinel',name:'Sentinel Path™',level:'Intermediate',need:15,line:'Protect what you build. Systems and habits that keep your momentum going.',items:['Focus and consistency','Avoiding burnout and drift','Building a team around you']},
+ {id:'vanguard',name:'Vanguard Path™',level:'Serious Builder',need:20,line:'Go first. Lead others and build something bigger than yourself.',items:['Leading from the front','Taking on bigger bets','Your launch plan']}
+];
+const $=id=>document.getElementById(id);
+function state(){try{return JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){return {}}}
+function sim(){try{return Math.max(0,Number(localStorage.getItem(SIM_KEY))||0)}catch(e){return 0}}
+const s=state();
+const first=((s.name||'Builder').trim().split(/\s+/)[0])||'Builder';
+const profile=(s.profile||'').trim();
+$('userName').textContent=first;$('avatar').textContent=first.charAt(0).toUpperCase()||'B';
+$('founderName').textContent=BASE_CONFIG.founderName;
+function count(){return Math.max(0,Number(s.confirmedInviteCount)||0)+sim()}
+function toast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove('show'),2600)}
+function go(url,missing){if(url){window.open(url,'_blank','noopener')}else toast(missing||"This link isn't connected yet.")}
+/* progress: milestones sit at the center of four equal columns */
+const POS=[12.5,37.5,62.5,87.5];
+function fillPct(n){if(n<=0)return 0;if(n<MILESTONES[0])return POS[0]*n/MILESTONES[0];for(let i=0;i<MILESTONES.length-1;i++){if(n<MILESTONES[i+1])return POS[i]+(POS[i+1]-POS[i])*(n-MILESTONES[i])/(MILESTONES[i+1]-MILESTONES[i])}return POS[3]}
+const LABELS=[['Free Guide','+ Founders<br>Waitlist'],['Steward<br>Path™','unlocks'],['Sentinel<br>Path™','unlocks'],['Vanguard<br>Path™','unlocks']];
+function renderProgress(){
+  const n=count();$('inviteCount').textContent=n.toLocaleString();
+  $('fill').style.width=fillPct(n)+'%';
+  $('track').querySelectorAll('.m').forEach(e=>e.remove());
+  MILESTONES.forEach((m,i)=>{const d=document.createElement('span');d.className='m'+(n>=m?' done':'');d.style.left=POS[i]+'%';d.textContent=n>=m?'✓':m;d.setAttribute('aria-label',m+' invites'+(n>=m?' reached':''));$('track').appendChild(d)});
+  $('labs').innerHTML=LABELS.map((l,i)=>`<div style="left:${POS[i]}%"><b>${l[0]}</b>${n>=MILESTONES[i]?'unlocked':l[1]}</div>`).join('');
+  const next=MILESTONES.find(m=>n<m);
+  {const k=MILESTONES.indexOf(next),left=next?next-n:0,w=left===1?'Confirmed Invite':'Confirmed Invites';$('nextNote').textContent=next?(n===0&&k===0?`${next} Confirmed Invites to unlock your free guide.`:k===0?`${left} more ${w} to unlock your free guide.`:`${left} more ${w} to unlock ${LABELS[k][0].replace('<br>',' ')}.`):'You reached every milestone. Thank you for inviting others.';}
+}
+function renderPaths(){
+  const n=count();
+  $('paths').innerHTML=PATHS.map(p=>{const open=n>=p.need,page=BASE_CONFIG.pathPages[p.id];
+    return `<article class="pc${open?' open':''}"><div class="ptop"><span class="lvl">${p.level.toUpperCase()}</span><span class="lk">${open?'Unlocked':'🔒 '+p.need+' invites'}</span></div><h3>${p.name}</h3><p class="pt">${p.line}</p><ul>${p.items.map(i=>`<li>${i}</li>`).join('')}</ul>${open?`<button class="btn" type="button" data-path="${p.id}">${page?'OPEN PATH →':'UNLOCKED · PAGE COMING SOON'}</button>`:`<button class="btn ghost" type="button" disabled>LOCKED · ${p.need-n} TO GO</button>`}</article>`}).join('');
+  $('paths').querySelectorAll('[data-path]').forEach(b=>b.onclick=()=>{const u=BASE_CONFIG.pathPages[b.dataset.path];if(u)location.href=u;else toast('This Path page is coming soon.')});
+}
+function renderGuide(){
+  const n=count(),title=(profile?profile+' Builder Guide':'Builder Guide'),free=n>=MILESTONES[0];
+  const inside='<ul class="inside"><li>Your 3 strengths and how to use them</li><li>Your blind spots and how to cover them</li><li>Who to build with</li><li>Your 30-day action plan</li><li>A first look at the 3 Paths</li></ul>';
+  const cover=`<div class="cover">${(profile?profile+'<br>':'')}BUILDER<br>GUIDE</div>`;
+  $('guideCard').innerHTML=free
+   ?`<div class="row">${cover}<div><h2>Your ${title} is unlocked</h2><p class="lead" style="margin:0 0 8px">You reached 5 invites. Your personal playbook is free.</p>${inside}</div></div><button class="btn" id="guideDl" type="button">DOWNLOAD MY GUIDE</button>`
+   :`<div class="row">${cover}<div><h2>Your ${title}</h2><p class="lead" style="margin:0 0 8px">A personal playbook for how you build, who to build with, and what comes next.</p>${inside}</div></div><div class="price"><b>$${GUIDE_PRICE}</b><s>$${GUIDE_REGULAR}</s><span>Builder price</span></div><button class="btn ghost" id="guideBuy" type="button">GET MY GUIDE · $${GUIDE_PRICE}</button><div class="or">OR GET IT FREE</div><p class="free-note">Invite 5 Builders to take the Builder&nbsp;Quiz™. You have ${n} so far.</p>`;
+  const dl=$('guideDl'),buy=$('guideBuy');
+  if(dl)dl.onclick=()=>go(BASE_CONFIG.guideDownloadUrl,'Your guide download link will be connected soon.');
+  if(buy)buy.onclick=()=>go(BASE_CONFIG.guideCheckoutUrl,'Checkout will be connected soon.');
+}
+function renderAll(){renderProgress();renderPaths();renderGuide()}
+/* invite link + sharing */
+function copyText(t){if(navigator.clipboard&&navigator.clipboard.writeText)return navigator.clipboard.writeText(t);const ta=document.createElement('textarea');ta.value=t;ta.style.cssText='position:fixed;opacity:0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(e){}ta.remove();return Promise.resolve()}
+function inviteCode(){return s.inviteCode||('NOVAX-'+first.toUpperCase())}
+function inviteUrl(){return location.origin+location.pathname.replace(/[^/]*$/,'')+'quiz.html?ref='+encodeURIComponent(inviteCode())}
+function share(){const url=inviteUrl(),text='Invite Builders to take the Builder Quiz™. Help Launch NovaX™. Unlock Founding Rewards.';
+  if(navigator.share){navigator.share({title:'NovaX™',text,url}).catch(e=>{if(e&&e.name!=='AbortError')copyText(url).then(()=>toast('Invite link copied.'))})}
+  else copyText(url).then(()=>toast('Invite link copied.'))}
+$('inviteBtn').onclick=share;
+$('copyBtn').onclick=()=>copyText(inviteUrl()).then(()=>toast('Invite link copied.'));
+$('founderSite').onclick=()=>go(BASE_CONFIG.founderSiteUrl,'Founder website link coming soon.');
+$('bookBtn').onclick=()=>go(BASE_CONFIG.bookPresellUrl,'Book pre-order will be connected soon.');
+document.querySelectorAll('[data-sim]').forEach(b=>b.onclick=()=>{try{localStorage.setItem(SIM_KEY,String(sim()+Number(b.dataset.sim)))}catch(e){}renderAll()});
+$('simReset').onclick=()=>{try{localStorage.removeItem(SIM_KEY)}catch(e){}renderAll()};
+renderAll();
+</script>
+</body>
+</html>
