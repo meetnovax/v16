@@ -1,0 +1,153 @@
+/* NovaX™ Signature #5 visual prototype layer.
+   Functional behavior remains owned by the V41 baseline; this file is visual-only. */
+:root{
+  --nx-bg:#050914;
+  --nx-bg2:#091226;
+  --nx-panel:rgba(10,18,36,.82);
+  --nx-panel2:rgba(14,24,48,.78);
+  --nx-text:#f3f6ff;
+  --nx-muted:#9ca8bf;
+  --nx-soft:#6f7d96;
+  --nx-line:rgba(133,160,205,.20);
+  --nx-line-strong:rgba(133,160,205,.34);
+  --nx-blue:#49a7ff;
+  --nx-violet:#8d5cff;
+  --nx-purple:#b85cff;
+  --nx-cyan:#51d8ff;
+  --nx-white:#f4f7fb;
+  --nx-shadow:0 28px 90px rgba(0,0,0,.42);
+  --nx-radius:22px;
+}
+
+/* ---------- shared page atmosphere ---------- */
+.auth-shell,.wrap,.app,.landing{position:relative;isolation:isolate}
+.auth-shell:before,.wrap:before,.app:before,.landing:before{
+  content:"";position:fixed;inset:0;z-index:-10;pointer-events:none;
+  background:
+    radial-gradient(circle at 15% 15%,rgba(63,132,255,.14),transparent 27%),
+    radial-gradient(circle at 85% 18%,rgba(139,77,255,.13),transparent 28%),
+    radial-gradient(circle at 50% 100%,rgba(30,120,210,.10),transparent 34%),
+    linear-gradient(135deg,#030711 0%,#071022 48%,#050914 100%);
+}
+.auth-shell:after,.wrap:after,.app:after,.landing:after{
+  content:"";position:fixed;inset:0;z-index:-9;pointer-events:none;opacity:.18;
+  background-image:linear-gradient(rgba(125,165,220,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(125,165,220,.08) 1px,transparent 1px);
+  background-size:72px 72px;mask-image:linear-gradient(to bottom,black,transparent 78%);
+}
+
+/* ---------- Landing ---------- */
+body:has(.landing){background:#050914!important;color:var(--nx-text)!important}
+body:has(.landing) .landing{height:calc(100svh - 44px)!important;min-height:620px!important;background:transparent!important;overflow:hidden}
+body:has(.landing) .landing::before{
+  background-image:
+    radial-gradient(circle at 50% 18%,rgba(78,161,255,.16),transparent 25%),
+    radial-gradient(circle at 76% 55%,rgba(132,76,255,.12),transparent 26%),
+    linear-gradient(145deg,#040814 0%,#07132b 54%,#050914 100%)!important;
+  background-size:auto!important;background-position:center!important;
+}
+body:has(.landing) .landing::after{
+  display:block!important;background:linear-gradient(180deg,rgba(3,7,17,.18),rgba(3,7,17,.28) 52%,rgba(3,7,17,.86) 100%)!important;
+}
+body:has(.landing) .content{justify-content:center!important;padding:34px 22px 70px!important}
+body:has(.landing) .logo{width:min(560px,70vw)!important;filter:drop-shadow(0 10px 28px rgba(49,119,255,.10))!important}
+body:has(.landing) .tagline{margin-top:18px!important;color:#dbe8ff!important;font-size:clamp(10px,1.1vw,16px)!important;letter-spacing:.38em!important}
+body:has(.landing) .hero-copy{margin-top:clamp(42px,7vh,82px)!important;max-width:900px!important}
+body:has(.landing) h1{font-size:clamp(42px,6.2vw,84px)!important;letter-spacing:-.045em!important}
+body:has(.landing) h1 .gold{background:linear-gradient(90deg,#6dbdff,#b46dff 70%,#d6b9ff);-webkit-background-clip:text;background-clip:text;color:transparent!important}
+body:has(.landing) .subcopy{color:#aebbd2!important;font-size:clamp(16px,1.65vw,24px)!important;line-height:1.5!important;margin-top:24px!important}
+body:has(.landing) .cta{border:1px solid rgba(126,183,255,.78)!important;background:linear-gradient(100deg,rgba(55,128,240,.18),rgba(130,77,255,.18))!important;color:#eef5ff!important;box-shadow:0 14px 44px rgba(36,103,211,.20),inset 0 0 0 1px rgba(255,255,255,.04)!important;backdrop-filter:blur(14px)!important}
+body:has(.landing) .cta:hover{background:linear-gradient(100deg,rgba(55,128,240,.30),rgba(130,77,255,.28))!important}
+body:has(.landing) .bottom-text{color:#8493ad!important;letter-spacing:.25em!important}
+body:has(.landing) .ring{opacity:.78!important;filter:drop-shadow(0 0 16px rgba(78,161,255,.22))}
+body:has(.landing) .site-footer{background:#030610!important;border-top:1px solid rgba(130,158,205,.12)!important;color:#68758c!important}
+body:has(.landing) .site-footer a{color:#8796ad!important}
+@media(max-width:600px) and (orientation:portrait){
+  body:has(.landing) .landing{height:calc(100svh - 74px)!important;min-height:0!important}
+  body:has(.landing) .content{display:flex!important;position:relative!important;inset:auto!important;padding:26px 20px 52px!important}
+  body:has(.landing) .logo{display:block!important;width:min(78vw,360px)!important}
+  body:has(.landing) .tagline{display:block!important;font-size:9px!important;letter-spacing:.28em!important;margin-top:13px!important}
+  body:has(.landing) .hero-copy{display:block!important;margin-top:54px!important}
+  body:has(.landing) h1{font-size:clamp(37px,12vw,54px)!important}
+  body:has(.landing) .subcopy{font-size:15px!important;margin-top:20px!important}
+  body:has(.landing) .cta{min-height:56px!important;width:min(88vw,360px)!important;font-size:14px!important}
+  body:has(.landing) .bottom{display:flex!important;bottom:16px!important}
+  body:has(.landing) .ring{width:38px!important;height:38px!important}
+  body:has(.landing) .mobile-cta-hit{display:none!important}
+  body:has(.landing) .site-footer{height:74px!important}
+}
+
+/* ---------- Auth / identity ---------- */
+body:has(.auth-shell){background:#050914!important;color:var(--nx-text)!important}
+body:has(.auth-shell){display:flex;align-items:center;justify-content:center;padding:22px!important;min-height:100svh}
+body:has(.auth-shell) .auth-shell{width:min(100%,560px)}
+body:has(.auth-shell) .panel{background:linear-gradient(145deg,rgba(10,19,39,.94),rgba(6,12,26,.92))!important;border:1px solid var(--nx-line-strong)!important;border-radius:26px!important;padding:42px 34px!important;box-shadow:var(--nx-shadow),inset 0 1px 0 rgba(255,255,255,.04)!important;text-align:left!important}
+body:has(.auth-shell) .logo{display:block!important;width:min(300px,76%)!important;margin:0 auto 26px!important}
+body:has(.auth-shell) .eyebrow{color:#7dbaff!important;letter-spacing:.22em!important;font-size:10px!important}
+body:has(.auth-shell) .headline{font-family:Inter,system-ui,sans-serif!important;font-weight:650!important;letter-spacing:-.035em!important;color:#f4f7ff!important;font-size:clamp(34px,6vw,50px)!important}
+body:has(.auth-shell) .sub{color:var(--nx-muted)!important;font-size:14px!important}
+body:has(.auth-shell) .auth-buttons{gap:12px!important}
+body:has(.auth-shell) .auth-btn{border:1px solid var(--nx-line-strong)!important;border-radius:13px!important;background:rgba(255,255,255,.045)!important;color:#edf4ff!important;min-height:54px!important;letter-spacing:.07em!important}
+body:has(.auth-shell) .auth-btn.primary{background:linear-gradient(100deg,#317fdc,#6d4eea)!important;border-color:transparent!important;color:white!important}
+body:has(.auth-shell) .auth-btn.apple{background:#f3f6fb!important;color:#08101e!important;border-color:#f3f6fb!important}
+body:has(.auth-shell) .profile{border-top:1px solid var(--nx-line)!important}
+body:has(.auth-shell) .avatar{border:1px solid rgba(93,165,255,.45)!important;background:linear-gradient(145deg,#10284c,#241344)!important}
+body:has(.auth-shell) .profile-name{font-family:Inter,system-ui,sans-serif!important;font-weight:700!important}
+body:has(.auth-shell) .fineprint,body:has(.auth-shell) .fineprint a{color:#708099!important}
+
+/* ---------- Quiz / Builder Profile ---------- */
+body:has(.quiz-page){background:#050914!important;color:var(--nx-text)!important}
+body:has(.quiz-page) .wrap{width:min(920px,94vw)!important;padding:28px 0 80px!important}
+body:has(.quiz-page) .header{text-align:left!important;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;margin-bottom:28px!important;padding:18px 20px;background:rgba(8,16,33,.68);border:1px solid var(--nx-line);border-radius:20px;backdrop-filter:blur(14px)}
+body:has(.quiz-page) .header .logo{width:190px!important;margin:0!important}
+body:has(.quiz-page) .tagline{color:#8fa8c9!important;letter-spacing:.28em!important;font-size:9px!important;text-transform:uppercase}
+body:has(.quiz-page) .panel{background:linear-gradient(145deg,rgba(10,19,39,.91),rgba(6,12,26,.92))!important;border:1px solid var(--nx-line)!important;border-radius:24px!important;padding:38px!important;box-shadow:var(--nx-shadow),inset 0 1px 0 rgba(255,255,255,.03)!important}
+body:has(.quiz-page) .panel h1,body:has(.quiz-page) .panel h2{font-family:Inter,system-ui,sans-serif!important;font-weight:650!important;letter-spacing:-.04em!important;color:#f4f7ff!important}
+body:has(.quiz-page) .panel h1{font-size:clamp(34px,6vw,58px)!important}
+body:has(.quiz-page) .panel h2{font-size:clamp(29px,5vw,46px)!important}
+body:has(.quiz-page) .panel p{color:var(--nx-muted)!important}
+body:has(.quiz-page) input{background:rgba(2,7,17,.72)!important;border:1px solid var(--nx-line-strong)!important;border-radius:12px!important;color:#fff!important}
+body:has(.quiz-page) label{color:#91a4c0!important}
+body:has(.quiz-page) button{border:1px solid rgba(110,175,255,.50)!important;border-radius:12px!important;background:linear-gradient(100deg,rgba(49,127,220,.16),rgba(109,78,234,.14))!important;color:#eef5ff!important}
+body:has(.quiz-page) button:hover{background:linear-gradient(100deg,rgba(49,127,220,.27),rgba(109,78,234,.24))!important}
+body:has(.quiz-page) .answer{background:rgba(255,255,255,.035)!important;border-color:var(--nx-line)!important}
+body:has(.quiz-page) .answer:hover,body:has(.quiz-page) .answer.selected{background:rgba(83,139,228,.14)!important;border-color:rgba(105,183,255,.60)!important}
+body:has(.quiz-page) .progress{background:#152038!important;height:4px!important}
+body:has(.quiz-page) .bar{background:linear-gradient(90deg,var(--nx-blue),var(--nx-violet))!important}
+body:has(.quiz-page) .score{color:#e8efff!important;font-family:Inter,system-ui,sans-serif!important;font-weight:700!important}
+body:has(.quiz-page) .tag{border-color:rgba(111,174,255,.40)!important;color:#9ccaff!important;background:rgba(59,126,220,.08)!important;border-radius:999px!important}
+body:has(.quiz-page) .box{border-color:var(--nx-line)!important}
+body:has(.quiz-page) .path{font-family:Inter,system-ui,sans-serif!important;color:#c7d9f5!important}
+body:has(.quiz-page) .share-profile{border-color:var(--nx-line)!important}
+body:has(.quiz-page) .profile-card{border-color:rgba(112,175,255,.42)!important;box-shadow:0 28px 90px rgba(0,0,0,.55)!important}
+@media(max-width:650px){body:has(.quiz-page) .header{grid-template-columns:1fr;text-align:center;gap:10px}body:has(.quiz-page) .header .logo{margin:auto!important;width:min(220px,70vw)!important}body:has(.quiz-page) .panel{padding:24px 18px!important}}
+
+/* ---------- Hub ---------- */
+body:has(.app){background:#050914!important;color:var(--nx-text)!important}
+body:has(.app) .sidebar{background:rgba(5,12,27,.92)!important;border-color:var(--nx-line)!important;box-shadow:20px 0 60px rgba(0,0,0,.18)}
+body:has(.app) .brand img{width:170px!important;height:auto!important;object-fit:contain!important}
+body:has(.app) .nav button{color:#9daac0!important;border-color:transparent!important;background:transparent!important}
+body:has(.app) .nav button.active,body:has(.app) .nav button:hover{background:linear-gradient(90deg,rgba(56,127,225,.18),rgba(130,76,255,.12))!important;color:#f1f6ff!important;border-color:rgba(105,171,255,.20)!important}
+body:has(.app) .top{background:rgba(4,10,22,.76)!important;border-color:var(--nx-line)!important;backdrop-filter:blur(14px)}
+body:has(.app) .card,body:has(.app) .hero{background:linear-gradient(145deg,rgba(10,19,39,.86),rgba(6,12,26,.86))!important;border-color:var(--nx-line)!important;box-shadow:0 22px 70px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.025)!important}
+body:has(.app) .hero{background:radial-gradient(circle at 78% 22%,rgba(123,76,255,.20),transparent 28%),radial-gradient(circle at 30% 30%,rgba(45,139,255,.16),transparent 30%),linear-gradient(145deg,rgba(10,19,39,.96),rgba(6,12,26,.92))!important}
+body:has(.app) .hero h1,body:has(.app) .card h2{font-family:Inter,system-ui,sans-serif!important;font-weight:650!important;letter-spacing:-.035em!important}
+body:has(.app) .hero .tagline{color:#8fc5ff!important}
+body:has(.app) .sub,body:has(.app) p{color:#93a3bc!important}
+body:has(.app) .node .dot{border-color:rgba(104,179,255,.40)!important;background:#071329!important;color:#9ed0ff!important}
+body:has(.app) .node.done .dot{background:linear-gradient(135deg,#317fdc,#714be8)!important;color:#fff!important;border-color:transparent!important}
+body:has(.app) .node.current .dot{box-shadow:0 0 0 6px rgba(84,151,255,.10),0 0 28px rgba(91,129,255,.30)!important}
+body:has(.app) .path{background:rgba(255,255,255,.025)!important;border-color:var(--nx-line)!important}
+body:has(.app) .path button,body:has(.app) .invite button,body:has(.app) .theme button{border-color:rgba(105,173,255,.45)!important;background:rgba(49,127,220,.08)!important;color:#dcecff!important}
+body:has(.app) .state{border-color:rgba(115,173,255,.28)!important;color:#91c7ff!important;background:rgba(64,133,224,.08)!important}
+body:has(.app) .reward{border-color:var(--nx-line)!important}
+body:has(.app) .rnum{background:linear-gradient(135deg,#317fdc,#784ce9)!important;color:white!important}
+body:has(.app) .footerbanner{background:radial-gradient(circle at 80% 20%,rgba(127,75,255,.20),transparent 28%),linear-gradient(145deg,#08142a,#0b1021)!important;border-color:var(--nx-line-strong)!important}
+body:has(.app) .light{--bg:#f3f7fc!important;--panel:#fff!important;--panel2:#edf2f8!important;--text:#172338!important;--muted:#617089!important;--line:#d9e1ec!important}
+body:has(.app) .light .sidebar,body:has(.app) .light .top{background:rgba(248,251,255,.90)!important;color:#172338!important}
+body:has(.app) .light .card,body:has(.app) .light .hero{background:rgba(255,255,255,.94)!important;color:#172338!important}
+body:has(.app) .light .nav button{color:#60718a!important}
+body:has(.app) .light .nav button.active,body:has(.app) .light .nav button:hover{background:#eaf2fc!important;color:#17304e!important}
+body:has(.app) .light .hero p,body:has(.app) .light .sub,body:has(.app) .light p{color:#63728a!important}
+body:has(.app) .light .footerbanner{background:linear-gradient(145deg,#edf5ff,#f3efff)!important;color:#172338!important}
+
+@media(max-width:700px){body:has(.app) .brand img{width:124px!important}body:has(.app) .nav button:nth-child(n+5){display:none!important}}
